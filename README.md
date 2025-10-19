@@ -15,18 +15,29 @@ A production-ready AI chatbot application built with Next.js 15, featuring real-
 
 ## Features
 
-- 🤖 **AI Chat Integration** - Support for OpenAI GPT and Google Gemini APIs
-- � **Real-time Conversations** - Live chat updates with Convex subscriptions
-- �🔐 **Authentication-First** - Secure Clerk integration with user-specific data
+### Core Features (Production-Ready)
+
+- 🔐 **Authentication-First** - Secure Clerk integration with user-specific data
 - ⚡ **Type-Safe Architecture** - End-to-end TypeScript with Convex validators
 - 🎨 **Modern UI** - Tailwind CSS 4 + shadcn/ui components
 - 📱 **Responsive Design** - Mobile-first with dark mode support
-- � **Streaming Responses** - Server-Sent Events for smooth AI interactions
-- � **Conversation Persistence** - All messages stored in Convex backend
-- 📊 **Usage Tracking** - Token counting and cost monitoring
 - 🚧 **Maintenance Mode** - Built-in maintenance page
 - 📄 **SEO Ready** - Meta tags, sitemap, robots.txt
 - ⚠️ **Error Handling** - Graceful error recovery and user feedback
+
+### Planned Features (In Development)
+
+See `specs/001-ai-chatbot-wrapper/` for detailed specification:
+
+- 🤖 **AI Chat Wrapper** - Multi-provider support (OpenAI GPT + Google Gemini)
+- 💬 **Real-time Conversations** - Live streaming responses with conversation management
+- 📄 **File Upload & RAG** - Document upload with vector search (PDF, Markdown, images)
+- 🔑 **Flexible API Keys** - User-provided or fallback keys with validation
+- 🎨 **Ragnarok Online Theme** - Medieval-inspired UI with responsive design
+- ♿ **WCAG 2.1 AA Compliance** - Full accessibility support
+- 📊 **Token Tracking** - Context window management with cost monitoring
+
+**Status**: Requirements complete, ready for Phase 1 implementation
 
 ## Prerequisites
 
@@ -275,7 +286,7 @@ npx convex deploy
 
 Update your production environment variables with the production Convex URL.
 
-## Customization
+## Customize
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guide on:
 
