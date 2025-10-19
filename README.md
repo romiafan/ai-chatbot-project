@@ -1,36 +1,40 @@
-# Next.js Template with Convex & Clerk
+# AI Chatbot Project
 
-A modern Next.js template featuring authentication via Clerk and real-time backend with Convex.
+A production-ready AI chatbot application built with Next.js 15, featuring real-time conversations, authentication, and support for OpenAI/Gemini APIs. Built using minimal dependencies and following best practices for type safety, authentication, and real-time data patterns.
 
 ## Tech Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org) with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS 4 with OKLCH color space
 - **Authentication**: [Clerk](https://clerk.com)
 - **Backend**: [Convex](https://convex.dev) - Real-time backend with type-safe APIs
-- **UI Components**: Custom components with class-variance-authority
-- **Package Manager**: pnpm
+- **AI Services**: OpenAI API / Google Gemini API (configurable)
+- **UI Components**: shadcn/ui components with class-variance-authority
+- **Package Manager**: pnpm (strictly enforced)
 
 ## Features
 
-- 🔐 **Authentication** - Clerk integration with email/social logins
-- ⚡ **Real-time Backend** - Convex for type-safe, reactive data
+- 🤖 **AI Chat Integration** - Support for OpenAI GPT and Google Gemini APIs
+- � **Real-time Conversations** - Live chat updates with Convex subscriptions
+- �🔐 **Authentication-First** - Secure Clerk integration with user-specific data
+- ⚡ **Type-Safe Architecture** - End-to-end TypeScript with Convex validators
 - 🎨 **Modern UI** - Tailwind CSS 4 + shadcn/ui components
-- 📱 **Responsive** - Mobile-first design with dark mode
-- 🔒 **Type-safe** - End-to-end TypeScript
-- 🚀 **Fast Development** - Turbopack for instant HMR
-- 📄 **SEO Ready** - Meta tags, sitemap, robots.txt
-- ⚠️ **Error Handling** - Custom error pages and boundaries
-- 🧩 **Component Library** - Pre-built Navbar, Footer, layouts
+- 📱 **Responsive Design** - Mobile-first with dark mode support
+- � **Streaming Responses** - Server-Sent Events for smooth AI interactions
+- � **Conversation Persistence** - All messages stored in Convex backend
+- 📊 **Usage Tracking** - Token counting and cost monitoring
 - 🚧 **Maintenance Mode** - Built-in maintenance page
+- 📄 **SEO Ready** - Meta tags, sitemap, robots.txt
+- ⚠️ **Error Handling** - Graceful error recovery and user feedback
 
 ## Prerequisites
 
 - Node.js 20+ installed
-- pnpm installed (`npm install -g pnpm`)
+- pnpm installed (`npm install -g pnpm`) - **Required, not optional**
 - Clerk account ([clerk.com](https://clerk.com))
 - Convex account ([convex.dev](https://convex.dev))
+- OpenAI API key ([platform.openai.com](https://platform.openai.com)) or Google Gemini API key ([ai.google.dev](https://ai.google.dev))
 
 ## Getting Started
 
@@ -39,15 +43,15 @@ A modern Next.js template featuring authentication via Clerk and real-time backe
 ```bash
 # Clone the repository
 git clone <your-repo-url>
-cd nextjs-template
+cd ai-chatbot-project
 
-# Install dependencies
+# Install dependencies (must use pnpm)
 pnpm install
 ```
 
 ### 2. Environment Variables
 
-Create a `.env.local` file in the root directory:
+Create a `.env.local` file in the root directory (see `.env.local` for reference):
 
 ```env
 # Clerk Authentication
