@@ -303,15 +303,41 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guide on:
 
 ## AI Coding Agent Instructions
 
-This template includes comprehensive AI coding agent instructions in `.github/copilot-instructions.md`. These instructions are designed to help AI assistants (GitHub Copilot, Claude, ChatGPT, etc.) understand:
+### 🔴 CRITICAL: Documentation-First Workflow
 
-- Critical architecture patterns (provider nesting, middleware flow)
-- Deployment workflows for Vercel and Convex
-- Common project patterns (AI chatbots, ecommerce, landing pages)
-- Best practices for Convex queries/mutations/actions
-- Production-ready code examples
+**All AI coding assistants MUST check documentation before making changes:**
 
-**For AI agents**: Read `.github/copilot-instructions.md` first for project-specific guidance.
+1. **Technical references** → `/docs/` folder (OpenAI/Gemini model specs)
+2. **Project specifications** → `/specs/001-ai-chatbot-wrapper/` (features, schema, tasks)
+3. **Coding standards** → `.github/copilot-instructions.md` (patterns, architecture)
+
+**Quick Start for AI Assistants:**
+
+```text
+┌─────────────────────────────────────────────────────────┐
+│ BEFORE implementing ANY feature:                       │
+│ 1. Read relevant docs/specs files FIRST                │
+│ 2. Verify approach aligns with documented standards    │
+│ 3. Check for existing patterns in specifications       │
+│ 4. Implement following documented guidelines           │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Documentation Structure:**
+
+- **Main instructions** → `.github/copilot-instructions.md` (architecture, patterns, workflows)
+- **Workflow summary** → `DOCUMENTATION-WORKFLOW.md` (quick reference guide)
+- **AI model references** → `/docs/openai-models-reference.md` & `/docs/gemini-models-reference.md`
+- **Project specs** → `/specs/001-ai-chatbot-wrapper/spec.md` (features, requirements)
+- **Database schema** → `/specs/001-ai-chatbot-wrapper/data-model.md`
+- **API contracts** → `/specs/001-ai-chatbot-wrapper/contracts/convex-api.md`
+- **Cursor IDE rules** → `.cursorrules` (concise version for Cursor)
+
+**For GitHub Copilot**: Automatically reads `.github/copilot-instructions.md`
+
+**For other AI tools**: Start by reading `DOCUMENTATION-WORKFLOW.md` for the complete workflow
+
+**Why this matters**: Ensures consistency, prevents errors, and maintains alignment with project decisions.
 
 ## Learn More
 

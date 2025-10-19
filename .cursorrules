@@ -1,0 +1,58 @@
+# 🔴 CRITICAL: Documentation-First Workflow
+
+BEFORE making ANY code changes, you MUST:
+
+1. **Check `/docs/` folder** for technical references:
+
+   - `openai-models-reference.md` - OpenAI model specs, pricing, limits
+   - `gemini-models-reference.md` - Gemini model specs, pricing, limits
+
+2. **Check `/specs/001-ai-chatbot-wrapper/` for project specs**:
+
+   - `spec.md` - Feature requirements
+   - `data-model.md` - Database schema
+   - `plan.md` - Implementation roadmap
+   - `tasks.md` - Task breakdown
+   - `contracts/convex-api.md` - API contracts
+   - `checklists/` - Validation checklists
+
+3. **Mandatory workflow**:
+
+   ```text
+   Step 1: READ relevant docs/specs files FIRST
+   Step 2: Verify approach aligns with documented standards
+   Step 3: Check for existing patterns in specs
+   Step 4: Implement following documented guidelines
+   Step 5: Update docs if adding new patterns
+   ```
+
+## Key Rules
+
+- ✅ Always verify AI model names/parameters against `/docs/` references
+- ✅ Check data model before modifying Convex schema
+- ✅ Review API contracts before implementing endpoints
+- ✅ Consult task list before adding features
+- ❌ NEVER assume model capabilities without checking docs
+- ❌ NEVER modify schema without reviewing data-model.md
+- ❌ NEVER skip documentation review
+
+## Tech Stack
+
+- Next.js 15 + TypeScript + pnpm
+- Clerk (auth) + Convex (real-time backend)
+- shadcn/ui + Tailwind CSS 4
+- OpenAI & Gemini AI integration
+
+## Documentation Map
+
+| Task            | Check File                                              |
+| --------------- | ------------------------------------------------------- |
+| Add AI provider | `/docs/{provider}-models-reference.md`                  |
+| Modify database | `/specs/001-ai-chatbot-wrapper/data-model.md`           |
+| Add feature     | `/specs/001-ai-chatbot-wrapper/spec.md` + `tasks.md`    |
+| API changes     | `/specs/001-ai-chatbot-wrapper/contracts/convex-api.md` |
+| Setup project   | `/specs/001-ai-chatbot-wrapper/quickstart.md`           |
+
+## Remember
+
+When in doubt, read the docs first! 📖

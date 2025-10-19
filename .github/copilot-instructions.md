@@ -1,5 +1,54 @@
 # AI Coding Agent Instructions
 
+## 🔴 CRITICAL: Documentation-First Workflow (Read This First!)
+
+**BEFORE making ANY changes to code, AI models, or project architecture, you MUST:**
+
+1. **Check `/docs/` folder** for technical references:
+
+   - `openai-models-reference.md` - OpenAI model specifications, capabilities, pricing, limits
+   - `gemini-models-reference.md` - Google Gemini model specifications, capabilities, pricing, limits
+   - Always verify model names, parameters, and pricing against these references before implementation
+
+2. **Check `/specs/001-ai-chatbot-wrapper/` folder** for project specifications:
+
+   - `spec.md` - Complete feature specification and requirements
+   - `data-model.md` - Database schema and data structures
+   - `plan.md` - Implementation roadmap and architecture decisions
+   - `tasks.md` - Task breakdown and current status
+   - `quickstart.md` - Setup and getting started guide
+   - `contracts/convex-api.md` - Convex API contracts and interfaces
+   - `checklists/requirements.md` & `completeness.md` - Validation checklists
+
+3. **Workflow for ANY task**:
+   ```
+   ┌─────────────────────────────────────────────────────────┐
+   │ 1. READ relevant docs/specs files FIRST                │
+   │ 2. Verify approach aligns with documented standards    │
+   │ 3. Check for existing patterns/decisions in specs      │
+   │ 4. Implement changes following documented guidelines   │
+   │ 5. Update docs/specs if you add new patterns           │
+   └─────────────────────────────────────────────────────────┘
+   ```
+
+**Examples of when to check documentation:**
+
+- Adding AI provider support → Check `docs/openai-models-reference.md` or `docs/gemini-models-reference.md`
+- Modifying Convex schema → Check `specs/001-ai-chatbot-wrapper/data-model.md`
+- Adding new features → Check `specs/001-ai-chatbot-wrapper/spec.md` and `tasks.md`
+- Implementing API calls → Check `specs/001-ai-chatbot-wrapper/contracts/convex-api.md`
+- Setting up project → Check `specs/001-ai-chatbot-wrapper/quickstart.md`
+
+**Why this matters:**
+
+- ✅ Ensures consistency with project decisions
+- ✅ Prevents using deprecated/incorrect model names or parameters
+- ✅ Avoids reimplementing existing solutions
+- ✅ Maintains alignment with documented architecture
+- ✅ Reduces errors from outdated assumptions
+
+---
+
 ## Project Overview
 
 This is a **production-ready Next.js 15 template** for building modern web applications. Designed for AI chatbots (GPT/Gemini wrappers), ecommerce sites, landing pages, and company profiles.
@@ -387,3 +436,30 @@ handler: async (ctx, args) => {
 | Ecommerce       | `convex/products.ts`, `convex/cart.ts`     | `products`, `carts`, `orders` |
 | Landing Page    | `src/app/page.tsx`, `convex/leads.ts`      | `leads`, `contacts`           |
 | Company Profile | `src/app/about/page.tsx`, `convex/team.ts` | `team_members`, `portfolio`   |
+
+---
+
+## 📚 Documentation Reference Map
+
+Always consult these files before making related changes:
+
+### AI Model Integration
+
+- **OpenAI models** → `/docs/openai-models-reference.md`
+- **Gemini models** → `/docs/gemini-models-reference.md`
+
+### Project Architecture & Specifications
+
+- **Feature requirements** → `/specs/001-ai-chatbot-wrapper/spec.md`
+- **Database schema** → `/specs/001-ai-chatbot-wrapper/data-model.md`
+- **Implementation plan** → `/specs/001-ai-chatbot-wrapper/plan.md`
+- **Task tracking** → `/specs/001-ai-chatbot-wrapper/tasks.md`
+- **API contracts** → `/specs/001-ai-chatbot-wrapper/contracts/convex-api.md`
+- **Setup guide** → `/specs/001-ai-chatbot-wrapper/quickstart.md`
+
+### Validation Checklists
+
+- **Requirements checklist** → `/specs/001-ai-chatbot-wrapper/checklists/requirements.md`
+- **Completeness checklist** → `/specs/001-ai-chatbot-wrapper/checklists/completeness.md`
+
+**Remember**: When in doubt, read the docs first! 📖
