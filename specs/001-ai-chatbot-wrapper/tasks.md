@@ -27,9 +27,9 @@ This is a Next.js full-stack project using Convex:
 
 **Purpose**: Install dependencies and configure environment
 
-- [ ] T001 Install new dependencies: `pnpm add openai @google/generative-ai pdf-parse tiktoken`
-- [ ] T002 [P] Add environment variables to `.env.local`: `OPENAI_API_KEY`, `GEMINI_API_KEY`, `NEXT_PUBLIC_DEFAULT_AI_PROVIDER`, `NEXT_PUBLIC_DEFAULT_AI_MODEL`
-- [ ] T003 [P] Update `.env.example` with new AI-related environment variable documentation
+- [x] T001 Install new dependencies (OpenAI SDK, Google AI SDK, pdf-parse, tiktoken)
+- [x] T002 Create `.env.local` with AI provider environment variables (dev placeholders)
+- [x] T003 Update `.env.example` with AI-related environment variable documentation
 
 **Checkpoint**: Dependencies installed, environment configured
 
@@ -41,11 +41,11 @@ This is a Next.js full-stack project using Convex:
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Implement Convex schema in `convex/schema.ts` with all 5 tables (conversations, messages, fileAttachments, documentChunks, userSettings) and indexes per data-model.md
-- [ ] T005 [P] Create base user settings helper in `convex/lib/userSettings.ts` for retrieving API keys (checks user keys, falls back to admin keys)
-- [ ] T006 [P] Create error handling utilities in `convex/lib/errors.ts` for standardized error responses (9 error codes from contracts)
-- [ ] T007 [P] Start Convex dev server: `npx convex dev` and verify schema deployment
-- [ ] T007b [Foundational] Create auth check template in `convex/lib/auth.ts` with `requireAuth()` helper function that calls `ctx.auth.getUserIdentity()` and throws "Not authenticated" if null. Verify all user-data queries (conversations.list, conversations.get, messages.list, fileAttachments.list, userSettings.get) use this helper. Add code review checkpoint.
+- [x] T004 Implement Convex schema in `convex/schema.ts` with all 5 tables (conversations, messages, fileAttachments, documentChunks, userSettings) and indexes per data-model.md
+- [x] T005 [P] Create base user settings helper in `convex/lib/userSettings.ts` for retrieving API keys (checks user keys, falls back to admin keys)
+- [x] T006 [P] Create error handling utilities in `convex/lib/errors.ts` for standardized error responses (9 error codes from contracts)
+- [x] T007 [P] Start Convex dev server: `npx convex dev` and verify schema deployment
+- [x] T007b [Foundational] Create auth check template in `convex/lib/auth.ts` with `requireAuth()` helper function that calls `ctx.auth.getUserIdentity()` and throws "Not authenticated" if null. Verify all user-data queries (conversations.list, conversations.get, messages.list, fileAttachments.list, userSettings.get) use this helper. Add code review checkpoint.
 
 **Checkpoint**: Foundation ready - Convex schema deployed, helper utilities created, auth enforcement verified, user story implementation can now begin in parallel
 

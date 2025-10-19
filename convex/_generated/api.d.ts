@@ -8,6 +8,9 @@
  * @module
  */
 
+import type * as lib_auth from "../lib/auth.js";
+import type * as lib_errors from "../lib/errors.js";
+import type * as lib_userSettings from "../lib/userSettings.js";
 import type * as messages from "../messages.js";
 
 import type {
@@ -25,6 +28,9 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  "lib/auth": typeof lib_auth;
+  "lib/errors": typeof lib_errors;
+  "lib/userSettings": typeof lib_userSettings;
   messages: typeof messages;
 }>;
 declare const fullApiWithMounts: typeof fullApi;

@@ -9,7 +9,12 @@ A production-ready AI chatbot application built with Next.js 15, featuring real-
 - **Styling**: Tailwind CSS 4 with OKLCH color space
 - **Authentication**: [Clerk](https://clerk.com)
 - **Backend**: [Convex](https://convex.dev) - Real-time backend with type-safe APIs
-- **AI Services**: OpenAI API / Google Gemini API (configurable)
+- **AI Services**:
+  - OpenAI API (`openai@6.5.0` + `@openai/agents@0.1.10`)
+  - Google Gemini API (`@google/genai@1.25.0`)
+  - Token counting (`tiktoken@1.0.22`)
+  - Schema validation (`zod@3.25.76`)
+- **RAG Support**: PDF parsing (`pdf-parse@2.4.3`), vector search (Convex)
 - **UI Components**: shadcn/ui components with class-variance-authority
 - **Package Manager**: pnpm (strictly enforced)
 
@@ -37,7 +42,7 @@ See `specs/001-ai-chatbot-wrapper/` for detailed specification:
 - ♿ **WCAG 2.1 AA Compliance** - Full accessibility support
 - 📊 **Token Tracking** - Context window management with cost monitoring
 
-**Status**: Requirements complete, ready for Phase 1 implementation
+**Status**: Phase 2 (Foundational) complete - 8/97 tasks (8.2%) - Ready for user story implementation
 
 ## Prerequisites
 
@@ -108,7 +113,7 @@ Open [http://localhost:3000](http://localhost:3000) to see your app.
 
 ## Project Structure
 
-```
+```text
 ├── convex/                 # Convex backend
 │   ├── auth.config.ts     # Authentication configuration
 │   ├── messages.ts        # Example queries/mutations

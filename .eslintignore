@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Convex generated files
+convex/_generated/
+
+# Coverage
+coverage/
+
+# Minified files
+*.min.js
+*.min.mjs
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Vercel
+.vercel/
+
+# Environment files
+.env*
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
