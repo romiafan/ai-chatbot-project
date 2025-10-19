@@ -1,0 +1,32 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "layer",
+          "config",
+          "theme",
+          "custom-variant",
+          "custom-media",
+          "custom-selector"
+        ]
+      }
+    ],
+    "hue-degree-notation": null,
+    "custom-property-no-missing-var-function": null,
+    "import-notation": null,
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["theme", "screen"]
+      }
+    ],
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "lightness-notation": null
+  }
+}

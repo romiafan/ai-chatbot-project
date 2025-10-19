@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.*
+
+# Build outputs
+/.next/
+/out/
+/build/
+.vercel/
+.convex/
+
+# Generated files
+convex/_generated/
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env*
+!.env.example
+
+# Lock files (only ignore if using npm/yarn)
+# package-lock.json
+# yarn.lock
